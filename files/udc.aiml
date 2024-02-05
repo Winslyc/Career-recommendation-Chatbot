@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <category>
+    <pattern>star</pattern>
+    <template>I have no answer for that.</template>
+  </category>
+  
+  <category>
+      <pattern> Hello </pattern>
+      <template>
+          Hi! i'm a chatbot designed to help you find a career related to computer science. Can you answer a few questions for me?
+          <reply>
+             <text>Yes</text> 
+             <postback>CHOOSEYES</postback>
+          </reply>
+          <reply>
+              <text>No</text>
+              <postback>CHOOSENO</postback>
+          </reply>
+      </template>
+  </category>
+  
+  <category>
+      <pattern>CHOOSEYES</pattern>
+      <template>Would you like to code every day for work?
+                <reply>
+                    <text>Yes</text>
+                <postback>CHOOSECODE</postback>
+                </reply>
+                <reply>
+                <text>No</text>
+                <postback>CHOOSENOCODE</postback>    
+                </reply>
+      </template>
+  </category>
+        <category>
+            <pattern>CHOOSECODE</pattern>
+            <template>Wonderful! Now, do you want to work on developing customer facing websites and user interfaces or do you wan't to work on developing algorithms and functionality of programs.
+                    <reply>
+                        <text>User Interfaces</text>
+                        <postback>CHOOSEFRONTEND</postback>
+                    </reply>
+                    <reply>
+                        <text>Developing algorithms</text>
+                        <postback>CHOOSEBACKEND</postback>
+                    </reply>
+            </template>
+        </category>
+            <category>
+                <pattern>CHOOSEFRONTEND</pattern>
+                <template>Perfect I have just the career for you. You would enjoy a front end web developer job. Front End Developers primary focus is on the user's experience when visiting a website.
+                From the graphics to the website layout, a front end developrs job is to make sure that a website is appealling and easy to use for visitors. Front end developers typically use HTML and Javascript. 
+                Here's a link to a useful website where you can learn more about this path.
+                <link>
+                    <text>Front End Developer</text>
+                    <url>https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm#tab-2</url>
+                </link>
+                </template>
+            </category>
+         <category>
+                <pattern>CHOOSEBACKEND</pattern>
+                <template>Perfect, I have just the career for you. You would enjoy a Software Developer job. Software Developers primary role is to design and develop software to meet customers needs.
+                These developers also maintain functionality for products that they designed as well as fix bugs and provide regular updates. Here's a link top a useful website where you can learn more about this path.
+                <link>
+                    <text>Software Developer</text>
+                    <url>https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm#tab-2</url>
+                </link>
+                </template>
+            </category>
+            
+        <category>
+            <pattern>CHOOSENOCODE</pattern>
+            <template>
+                Do you like to work with data?
+                <reply>
+                    <text>Yes</text>
+                    <postback>YESDATA</postback>
+                </reply>
+                <reply>
+                    <text>No</text>
+                    <postback>NODATA</postback>
+                </reply>
+            </template>
+        </category>
+            <category>
+                <pattern>YESDATA</pattern>
+                <template>And would you like to work more with statistics or databases.
+                    <reply>
+                        <text>Statistics</text>
+                        <postback>DATAANALYST</postback>
+                    </reply>
+                    <reply>
+                        <text>Databases</text>
+                        <postback>DATABASEADMIN</postback>
+                    </reply>
+                </template>
+            </category>
+        <category>
+            <pattern>NODATA</pattern>
+            <template>
+                Do you want to work with IT Design.
+                <reply>
+                    <text>Yes</text>
+                    <postback>CHOOSECOMPUTERSYS</postback>
+                </reply>
+                <reply>
+                    <text>No</text>
+                   <postback>NOSUGGESTION</postback>
+                   </reply>
+            </template>
+        </category>
+        <category>
+            <pattern>DATAANALYST</pattern>
+            <template>
+                Great, I've found just the job for you. Data Scientist primary role is to collect, categorize and analyze data. In business data scientists clean data to ensure that is accurate and often use visualization software to present their findings to colleauges. Check out  
+                <link><text>Data Scientist</text><url>https://www.bls.gov/ooh/math/data-scientists.htm#tab-2</url></link>
+                 to learn more.
+            </template>
+        </category>
+        <category>
+            <pattern>DATABASEADMIN</pattern>
+            <template>
+            That's Amazing Here's a job i think you would enjoy. Database administrators design and build databases. SQL is the typical language of choice for building databases. Database administrators must also backup and restore data.
+            <link>
+                <text>Database Administrator</text>
+                <url>https://www.bls.gov/ooh/computer-and-information-technology/database-administrators.htm#tab-2</url>
+            </link>
+            </template>
+        </category>
+        <category>
+            <pattern>CHOOSECOMPUTERSYS</pattern>
+            <template>
+                Wow that was tough but I think I've got just the job for you. Computer Systems Analysts focus on developing IT systems for companies. In this analyst role you will be analyzing costs and benefits of IT systems, configuring new hardware and software, and test systems to  ensure they work.  Check out 
+                <link>
+                    <text>Computer Systems Analysts</text>
+                    <url>https://bls.gov/ooh/computer-and-information-technology/computer-systems-analysts.htm#tab-2</url>
+                </link>
+                
+            </template>
+        </category>
+        <category>
+            <pattern>NOSUGGESTION</pattern>
+            <template>
+                Sorry I wasn't able to help you find a career. Please check back in the future to see if we have any more options.
+                </template>
+        </category>
+  <category>
+      <pattern>CHOOSENO</pattern>
+      <template>That's okay! I'll help you out next time. </template>
+  </category>
+</aiml>
